@@ -1,4 +1,5 @@
 // src/App.js
+import { Analytics } from "@vercel/analytics/react"
 import React, { Suspense, lazy } from 'react';
 import GalaxyAnimation from './components/GalaxyAnimation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <Analytics />
       <GlobalStyles />
       <GalaxyAnimation />
       <div style={{ position: 'relative', zIndex: 1 }}>

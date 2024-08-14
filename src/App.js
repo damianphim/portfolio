@@ -1,4 +1,5 @@
 // src/App.js
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import React, { Suspense, lazy } from 'react';
 import GalaxyAnimation from './components/GalaxyAnimation';
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <SpeedInsights />
       <Analytics />
       <GlobalStyles />
       <GalaxyAnimation />

@@ -52,11 +52,6 @@ const Projects = () => {
         <ProjectDescription>Web Development Intern</ProjectDescription>
         <ProjectLink href="https://beadoctor.org" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
       </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>3D Portfolio</ProjectTitle>
-        <ProjectDescription>A portfolio for my portfolio.</ProjectDescription>
-        <ProjectLink href="https://example.com" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
       {/* Add more project cards as needed */}
     </ProjectsContainer>
   );

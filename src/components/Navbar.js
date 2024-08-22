@@ -44,7 +44,6 @@ const Navbar = () => {
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
       </NavLinks>
       <ToggleButton onClick={toggleTheme}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}

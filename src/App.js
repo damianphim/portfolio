@@ -8,11 +8,11 @@ import Navbar from './components/Navbar';
 import ThemeProvider from './components/ThemeProvider';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { useEffect } from 'react'
+import Footer from './components/Footer'; 
 
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
-const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   useEffect(() => {
@@ -36,10 +36,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
-              <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>
         </Router>
+        <Footer />
       </div>
     </ThemeProvider>
   );

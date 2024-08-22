@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import BackgroundAnimation from './GalaxyAnimation';
 import Projects from './Projects';
 import Skills from './Skills';
-import Contact from './Contact';
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -41,9 +40,6 @@ const Home = () => {
         </Section>
         <Section id="skills">
           <Skills />
-        </Section>
-        <Section id="contact">
-          <Contact />
         </Section>
       </HomeContainer>
     </>

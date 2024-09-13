@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    pointer-events: none;
+    pointer-events: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -27,16 +27,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     scroll-behavior: smooth;
     height: 100%;
-    pointer-events: none;
-  }
-
-
-  a {
-    color: ${(props) => props.theme.linkColor};
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+    pointer-events: auto;
   }
 
   .container {

@@ -52,7 +52,26 @@ const Projects = () => {
         <ProjectDescription>Web Development Intern</ProjectDescription>
         <ProjectLink href="https://beadoctor.org" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
       </ProjectCard>
-      {/* Add more project cards as needed */}
+      <ProjectCard>
+        <ProjectTitle>Belmontian Club</ProjectTitle>
+        <ProjectDescription>Website for my school club</ProjectDescription>
+        <ProjectLink href="https://github.com/damianphim/belmontian-club" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
+      </ProjectCard>
+      <ProjectCard>
+        <ProjectTitle>GiftSprint</ProjectTitle>
+        <ProjectDescription>AI finds you a last minute gift using your prompt, and then recommends the nearest store to buy it.</ProjectDescription>
+        <ProjectLink href="https://github.com/damianphim/giftsprint" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
+      </ProjectCard>
+      <ProjectCard>
+        <ProjectTitle>YouTime</ProjectTitle>
+        <ProjectDescription>Gives you daily affirmations and tasks to start your day.</ProjectDescription>
+        <ProjectLink href="https://github.com/kimannle/AppleHacks2024" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
+      </ProjectCard>
+      <ProjectCard>
+        <ProjectTitle>Chore Competitors</ProjectTitle>
+        <ProjectDescription>Compete with members of your household to see who can complete the most chores.</ProjectDescription>
+        <ProjectLink href="https://github.com/damianphim/ChoreCompetitors" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
+      </ProjectCard>
     </ProjectsContainer>
   );
 };

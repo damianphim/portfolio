@@ -1,7 +1,9 @@
-// src/components/Projects.js
+// Project section
+
 import React from 'react';
 import styled from 'styled-components';
 
+// Container for the projects section, using a responsive grid layout
 const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -10,6 +12,7 @@ const ProjectsContainer = styled.div`
   background-color: transparent;
 `;
 
+// Styled component for individual project cards
 const ProjectCard = styled.div`
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
@@ -24,15 +27,18 @@ const ProjectCard = styled.div`
   }
 `;
 
+// Styled title for the project card
 const ProjectTitle = styled.h2`
   margin-top: 0;
 `;
 
+// Styled title for the project card
 const ProjectDescription = styled.p`
   font-size: 1em;
   line-height: 1.4;
 `;
 
+// Styled link for viewing the project
 const ProjectLink = styled.a`
   pointer-events: auto;
   display: inline-block;

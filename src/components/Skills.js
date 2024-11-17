@@ -1,4 +1,5 @@
-// src/components/Skills.js
+// Skills section
+
 import React from 'react';
 import styled from 'styled-components';
 import { FaReact } from 'react-icons/fa';
@@ -6,16 +7,16 @@ import { FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoPython } from "react-icons/io";
 import { DiCss3 } from "react-icons/di";
-import { DiGithubBadge } from "react-icons/di";
 import { SiCplusplus } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 
-
+// Styled container for the skills section
 const SkillsContainer = styled.div`
   padding: 50px 20px;
   background-color: transparent;
 `;
 
+// Grid layout for arranging skill items
 const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -23,6 +24,7 @@ const SkillsGrid = styled.div`
   pointer-events: auto;
 `;
 
+// Individual skill item card
 const SkillItem = styled.div`
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
@@ -36,11 +38,13 @@ const SkillItem = styled.div`
   }
 `;
 
+// Icon styling for skills
 const SkillIcon = styled.div`
   font-size: 2em;
   margin-bottom: 10px;
 `;
 
+// Skill name styling
 const SkillName = styled.h3`
   margin: 0;
   font-size: 1.2em;
@@ -73,10 +77,6 @@ const Skills = () => {
           <SkillName>CSS</SkillName>
         </SkillItem>
         <SkillItem>
-          <SkillIcon><DiGithubBadge /></SkillIcon>
-          <SkillName>Github</SkillName>
-        </SkillItem>
-        <SkillItem>
           <SkillIcon><SiCplusplus /></SkillIcon>
           <SkillName>C++</SkillName>
         </SkillItem>
@@ -84,7 +84,6 @@ const Skills = () => {
           <SkillIcon><FaJava /></SkillIcon>
           <SkillName>Java</SkillName>
         </SkillItem>
-        {/* Add more skill items as needed */}
       </SkillsGrid>
     </SkillsContainer>
   );

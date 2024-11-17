@@ -1,10 +1,12 @@
-// src/components/Footer.js
+// Footer component that is stickied to the bottom of the page
+
 import React from 'react';
 import styled from 'styled-components';
 import { FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { DiGithubBadge } from 'react-icons/di';
 
+// Styled component for the footer container
 const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.background || '#f0f0f0'};
   color: ${(props) => props.theme.color || '#333'};
@@ -20,6 +22,7 @@ const FooterContainer = styled.footer`
   align-items: center;
 `;
 
+// Styled component for individual conact items
 const ContactItem = styled.div`
   margin: 0 15px;
 
@@ -39,11 +42,12 @@ const ContactItem = styled.div`
   }
 `;
 
+// React component for the Footer
 const Footer = () => {
   return (
     <FooterContainer>
       <ContactItem>
-        <a href="mailto:dphimister24@gmail.com">
+        <a href="mailto:dphimister24@gmail.com"> {/* Wrapped icons inside of <a> tags to make the icons clickable */}
           <MdEmail />
         </a>
       </ContactItem>

@@ -1,8 +1,10 @@
-// src/components/Navbar.js
+// Header/Navbar at top of page
+
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from './ThemeProvider';
 
+// Styled component for the navbar container
 const NavbarContainer = styled.nav`
   background-color: ${(props) => props.theme.navbarBg};
   padding: 15px;
@@ -11,6 +13,7 @@ const NavbarContainer = styled.nav`
   align-items: center;
 `;
 
+// Styled component for navigation links
 const NavLinks = styled.div`
   a {
     margin: 0 15px;
@@ -23,6 +26,7 @@ const NavLinks = styled.div`
   }
 `;
 
+// Styled component for the theme toggle button
 const ToggleButton = styled.button`
   pointer-events: auto;
   padding: 10px;
@@ -36,7 +40,7 @@ const ToggleButton = styled.button`
 `;
 
 const Navbar = () => {
-  const { toggleTheme, isDarkMode } = useContext(ThemeContext);
+  const { toggleTheme, isDarkMode } = useContext(ThemeContext); // Access theme toggle function and mode
 
   return (
     <NavbarContainer>

@@ -1,4 +1,5 @@
-// src/styles/GlobalStyles.js
+// Global styles for webpage
+
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -9,13 +10,13 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    pointer-events: auto;
+    background-color: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.color};
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin: 0.5em 0;
-    pointer-events: auto;
   }
 
   p {
@@ -23,11 +24,9 @@ export const GlobalStyles = createGlobalStyle`
     margin: 1em 0;
   }
 
-  /* src/styles/global.css or add to GlobalStyles.js */
   html {
     scroll-behavior: smooth;
     height: 100%;
-    pointer-events: auto;
   }
 
   .container {
@@ -35,11 +34,9 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
-    pointer-events: auto;
   }
 
   .button {
-    pointer-events: auto
     padding: 10px 20px;
     background-color: ${(props) => props.theme.buttonBg};
     color: ${(props) => props.theme.buttonColor};
@@ -47,13 +44,33 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+
     &:hover {
       background-color: ${(props) => props.theme.buttonHoverBg};
     }
-    #root {
-      display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: ${(props) => props.theme.navbarBg};
+  }
+
+  .navbar a {
+    margin-right: 1rem;
+    color: ${(props) => props.theme.color};
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
       flex-direction: column;
-      min-height: 100%;
+      align-items: center;
+    }
+
+    .navbar a {
+      margin-bottom: 1rem;
     }
   }
 `;

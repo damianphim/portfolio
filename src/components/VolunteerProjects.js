@@ -85,7 +85,7 @@ const VolunteerProjects = () => {
   const projects = [
     {
       title: "Zoe Ministries",
-      description: "Overhauled the website for a shelter supporting victims of sex trafficking.",
+      description: "Overhauled the website and database for a shelter supporting victims of sex trafficking.",
       link: "https://zoe-delaware.org",
       impact: "$4,586 saved in tech costs",
       testimonial: "Still in Progress",

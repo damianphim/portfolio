@@ -8,6 +8,7 @@ import ThemeProvider from './components/ThemeProvider';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { useEffect } from 'react'
 import Footer from './components/Footer'; 
+import VolunteerProjects from "./components/VolunteerProjects";
 
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
@@ -35,6 +36,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
+              <Route path="/volunteer" element={<VolunteerProjects />} />
             </Routes>
           </Suspense>
         </Router>

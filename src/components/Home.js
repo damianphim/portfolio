@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import BackgroundAnimation from './GalaxyAnimation';
 import Projects from './Projects';
 import Skills from './Skills';
+import VolunteerProjects from './VolunteerProjects';
 
 // Main container for the Home component
 const HomeContainer = styled.div`
@@ -42,6 +43,9 @@ const Home = () => {
         </Section>
         <Section id="projects">
           <Projects />
+        </Section>
+        <Section id="volunteer">
+          <VolunteerProjects />
         </Section>
         <Section id="skills">
           <Skills />

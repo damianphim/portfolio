@@ -101,7 +101,7 @@ const VolunteerProjects = () => {
       title: "Re-Imagine Education",
       description: "Overhauled a website for a non-profit that attracts BIPOC talent to education careers.",
       link: "https://re-imagineed.org",
-      impact: "$4,586 saved in tech costs",
+      impact: "$15,626 saved in tech costs",
       testimonial: `We had the privilege of working with Damian on a project to update the website for Re-Imagine Education, 
       and the experience was nothing short of outstanding. Damian brought an incredible level of professionalism, 
       creativity, and technical expertise to the table. From the start, Damian took the time to understand our 

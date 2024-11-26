@@ -87,8 +87,8 @@ const VolunteerProjects = () => {
       title: "Zoe Ministries",
       description: "Overhauled the website and database for a shelter supporting victims of sex trafficking.",
       link: "https://zoe-delaware.org",
-      impact: "$4,586 saved in tech costs",
-      testimonial: "Still in Progress",
+      impact: "$22,986 saved in tech costs",
+      testimonial: "Damian worked very hard on our website and did it in a timely manner. He communicated in a timely manner and did everything that I asked and suggested of him from the very beginning. One of the easiest people to work with and he did so with such excellence.",
     },
     {
       title: "Dutchtown South Community Center",
@@ -111,6 +111,13 @@ const VolunteerProjects = () => {
       to optimize the user experience and make the platform more accessible to our audience. Thanks to Damian’s hard 
       work, Re-Imagine Education now has a website that is modern, user-friendly, and effectively showcases our programs 
       and initiatives. The impact of his efforts will be felt for years to come as we continue to serve our community.`,
+    },
+    {
+      title: "Internation Children's Media Center",
+      description: "Overhauling their main website and creating the flagship program, Screen Smart's website, in collaboration with two other web developers using WordPress.",
+      link: "https://icmediacenter.org/",
+      impact: "$4,586 saved in tech costs",
+      testimonial: "In Progress",
     },
   ];
 

@@ -113,7 +113,7 @@ const VolunteerProjects = () => {
       and initiatives. The impact of his efforts will be felt for years to come as we continue to serve our community.`,
     },
     {
-      title: "Internation Children's Media Center",
+      title: "International Children's Media Center",
       description: "Collaborating with two other web developers to finish a nonprofit's main website, which is dedicated to transforming education by humanizing the way children and youth engage with digital devices. Together, we are also creating the website for the flagship program, Screen Smart, using WordPress.",
       link: "https://icmediacenter.org/",
       impact: "$4,586 saved in tech costs",

@@ -78,6 +78,11 @@ const Projects = () => {
         <ProjectDescription>Compete with members of your household to see who can complete the most chores.</ProjectDescription>
         <ProjectLink href="https://github.com/damianphim/ChoreCompetitors" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
       </ProjectCard>
+      <ProjectCard>
+        <ProjectTitle>AccessPilot</ProjectTitle>
+        <ProjectDescription> Real-time accessibility assistant for VS Code that scans your code for a11y issues and offers AI-powered suggestions to help you build more inclusive web experiences.</ProjectDescription>
+        <ProjectLink href="https://github.com/damianphim/AccessPilot" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
+      </ProjectCard>
     </ProjectsContainer>
   );
 };

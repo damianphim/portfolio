@@ -23,7 +23,7 @@ const ProjectCard = styled.div`
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px ${(props) => props.theme.boxShadowColor};
-  pointer-events: auto;
+    pointer-events: auto;
   }
 `;
 
@@ -32,10 +32,28 @@ const ProjectTitle = styled.h2`
   margin-top: 0;
 `;
 
-// Styled title for the project card
+// Styled description for the project card
 const ProjectDescription = styled.p`
   font-size: 1em;
   line-height: 1.4;
+`;
+
+// Tech tags for showing stack used
+const TagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+`;
+
+const Tag = styled.span`
+  background-color: ${(props) => props.theme.boxShadowColor};
+  color: ${(props) => props.theme.color};
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  border: 1px solid ${(props) => props.theme.color};
+  opacity: 0.8;
 `;
 
 // Styled link for viewing the project
@@ -43,6 +61,7 @@ const ProjectLink = styled.a`
   pointer-events: auto;
   display: inline-block;
   margin-top: 10px;
+  margin-right: 12px;
   color: ${(props) => props.theme.linkColor};
   text-decoration: none;
   &:hover {
@@ -50,40 +69,70 @@ const ProjectLink = styled.a`
   }
 `;
 
+const SectionTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 10px;
+`;
+
+const projects = [
+  {
+    title: 'AI Benchmarking Suite',
+    description:
+      'Production-ready benchmarking suite for comparing LLM performance across Anthropic Claude, Google Gemini, and Perplexity. Features real-time streaming metrics, cost tracking, RAG testing pipelines, citation quality analysis, and extended-thinking benchmarks.',
+    liveLink: 'https://ai-benchmarks-eight.vercel.app',
+    tags: ['React', 'Anthropic API', 'Gemini API', 'Perplexity', 'TypeScript'],
+  },
+  {
+    title: 'Symboulos',
+    description:
+      'Full-stack AI-powered academic planning tool with course search, scraped RateMyProfessor ratings, a proactive, conversational AI advisor, degree progress tracker, and statistical grade prediction.',
+    liveLink: 'https://ai-advisor-pi.vercel.app',
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'Anthropic API', 'Pandas', 'Vercel'],
+  },
+  {
+    title: 'Inclusify',
+    description:
+      'Full-stack browser extension that identifies and analyzes linguistic bias in academic documents, suggesting inclusive alternatives.',
+    githubLink: 'https://github.com/damianphim/bias-mirror',
+    tags: ['OpenAI API', 'Supabase', 'JavaScript'],
+  },
+  {
+    title: 'AccessPilot',
+    description:
+      'VS Code extension that promotes inclusive web design by auditing code against WCAG guidelines using axe-core and leveraging the OpenAI API to propose human-centered code improvements in a React-based WebView UI.',
+    githubLink: 'https://github.com/damianphim/accesspilot',
+    tags: ['VS Code API', 'React', 'OpenAI API', 'esbuild'],
+  },
+];
+
 const Projects = () => {
   return (
+    <div>
+      <SectionTitle>Projects</SectionTitle>
     <ProjectsContainer>
-      <ProjectCard>
-        <ProjectTitle>BeADoctor</ProjectTitle>
-        <ProjectDescription>Web Development Intern</ProjectDescription>
-        <ProjectLink href="https://beadoctor.org" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>Belmontian Club</ProjectTitle>
-        <ProjectDescription>Website for my school club</ProjectDescription>
-        <ProjectLink href="https://github.com/damianphim/belmontian-club" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>GiftSprint</ProjectTitle>
-        <ProjectDescription>AI finds you a last minute gift using your prompt, and then recommends the nearest store to buy it.</ProjectDescription>
-        <ProjectLink href="https://github.com/damianphim/giftsprint" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>YouTime</ProjectTitle>
-        <ProjectDescription>Gives you daily affirmations and tasks to start your day.</ProjectDescription>
-        <ProjectLink href="https://github.com/kimannle/AppleHacks2024" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>Chore Competitors</ProjectTitle>
-        <ProjectDescription>Compete with members of your household to see who can complete the most chores.</ProjectDescription>
-        <ProjectLink href="https://github.com/damianphim/ChoreCompetitors" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
-      <ProjectCard>
-        <ProjectTitle>AccessPilot</ProjectTitle>
-        <ProjectDescription> Real-time accessibility assistant for VS Code that scans your code for a11y issues and offers AI-powered suggestions to help you build more inclusive web experiences.</ProjectDescription>
-        <ProjectLink href="https://github.com/damianphim/AccessPilot" target="_blank" rel="noopener noreferrer">View Project</ProjectLink>
-      </ProjectCard>
+      {projects.map((project, index) => (
+        <ProjectCard key={index}>
+          <ProjectTitle>{project.title}</ProjectTitle>
+          <ProjectDescription>{project.description}</ProjectDescription>
+          <TagsContainer>
+            {project.tags.map((tag, i) => (
+              <Tag key={i}>{tag}</Tag>
+            ))}
+          </TagsContainer>
+          {project.liveLink && (
+            <ProjectLink href={project.liveLink} target="_blank" rel="noopener noreferrer">
+              Live Demo ↗
+            </ProjectLink>
+          )}
+          {project.githubLink && (
+            <ProjectLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </ProjectLink>
+          )}
+        </ProjectCard>
+      ))}
     </ProjectsContainer>
+    </div>
   );
 };
 

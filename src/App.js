@@ -9,7 +9,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { useEffect } from 'react'
 import Footer from './components/Footer'; 
 import VolunteerProjects from "./components/VolunteerProjects";
-
+import Plan from './components/plan/Plan';
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
@@ -37,6 +37,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/volunteer" element={<VolunteerProjects />} />
+              <Route path="/plan" element={<Plan />} />
             </Routes>
           </Suspense>
         </Router>

@@ -5,16 +5,6 @@ const fadeIn = keyframes`from { opacity: 0; } to { opacity: 1; }`;
 
 const Wrap = styled.div`animation: ${fadeIn} 0.25s ease;`;
 
-const SectionLabel = styled.div`
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: 0.4;
-  font-family: 'Courier New', monospace;
-  margin: 28px 0 10px;
-  &:first-child { margin-top: 0; }
-`;
-
 const Block = styled.div`
   font-size: 0.88rem;
   line-height: 1.7;

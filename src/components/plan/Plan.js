@@ -191,26 +191,6 @@ const Td = styled.td`
   vertical-align: top;
 `;
 
-const StatusPill = styled.span`
-  font-size: 0.7rem;
-  padding: 3px 9px;
-  border-radius: 20px;
-  font-family: 'Courier New', monospace;
-  letter-spacing: 0.06em;
-  border: 1px solid ${p => {
-    if (p.$s === 'sent') return 'rgba(255,220,100,0.5)';
-    if (p.$s === 'replied' || p.$s === 'meeting_scheduled') return 'rgba(100,255,150,0.5)';
-    if (p.$s === 'no_reply' || p.$s === 'declined') return 'rgba(255,100,100,0.4)';
-    return 'rgba(255,255,255,0.2)';
-  }};
-  color: ${p => {
-    if (p.$s === 'sent') return 'rgba(255,220,100,0.9)';
-    if (p.$s === 'replied' || p.$s === 'meeting_scheduled') return 'rgba(100,255,150,0.9)';
-    if (p.$s === 'no_reply' || p.$s === 'declined') return 'rgba(255,100,100,0.8)';
-    return 'rgba(255,255,255,0.5)';
-  }};
-`;
-
 const StatusSelect = styled.select`
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.12);

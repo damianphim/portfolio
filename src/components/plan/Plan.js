@@ -191,6 +191,8 @@ const Td = styled.td`
   vertical-align: top;
 `;
 
+
+
 const StatusSelect = styled.select`
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.12);
@@ -209,6 +211,55 @@ const ReadingGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 6px;
   @media (max-width: 560px) { grid-template-columns: 1fr; }
+`;
+
+// ─── Research Notes ───────────────────────────────────────────────────────────
+const NoteCard = styled.div`
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 6px;
+  overflow: hidden;
+`;
+
+const NoteHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 14px 8px;
+  background: rgba(255,255,255,0.03);
+`;
+
+const NoteTitle = styled.div`
+  font-size: 0.85rem;
+  opacity: 0.8;
+`;
+
+const NoteStatus = styled.div`
+  font-size: 0.68rem;
+  font-family: 'Courier New', monospace;
+  opacity: 0.35;
+`;
+
+const NoteTextarea = styled.textarea`
+  width: 100%;
+  background: rgba(255,255,255,0.025);
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: inherit;
+  padding: 12px 14px;
+  font-size: 0.84rem;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 72px;
+  box-sizing: border-box;
+  outline: none;
+  opacity: 0.75;
+  &:focus { 
+    background: rgba(255,255,255,0.04);
+    opacity: 1;
+  }
+  &::placeholder { opacity: 0.3; }
 `;
 
 // ─── Export/Import ────────────────────────────────────────────────────────────
@@ -442,6 +493,34 @@ export default function Plan() {
                 );
               })}
             </ReadingGrid>
+          </Section>
+
+          {/* Research notes */}
+          <Section>
+            <SectionLabel>Research Notes — Phase A Papers</SectionLabel>
+            {[
+              { key: 'boring_ottoboni', label: 'Boring, Ottoboni & Stark (2016)', hint: 'Natural experiment, random assignment, SETs measure satisfaction not learning...' },
+              { key: 'centra_gaubatz', label: 'Centra & Gaubatz (2000)', hint: 'The counterargument — what validity SETs do have...' },
+              { key: 'felton_mitchell', label: 'Felton, Mitchell & Stinson', hint: 'RMP-specific findings...' },
+              { key: 'macnell_driscoll', label: 'MacNell, Driscoll & Hunt (2015)', hint: 'Online course gender study — same instructor, different perceived name...' },
+              { key: 'kreitzer_sweet_cushman', label: 'Kreitzer & Sweet-Cushman (2022)', hint: 'Political science SETs and gender bias...' },
+            ].map(paper => {
+              const note = state.research_notes?.[paper.key] ?? '';
+              return (
+                <NoteCard key={paper.key}>
+                  <NoteHeader>
+                    <NoteTitle>{paper.label}</NoteTitle>
+                    <NoteStatus>{note.length > 0 ? `${note.length} chars` : 'no notes yet'}</NoteStatus>
+                  </NoteHeader>
+                  <NoteTextarea
+                    value={note}
+                    onChange={e => update(`research_notes.${paper.key}`, e.target.value)}
+                    placeholder={paper.hint}
+                    rows={3}
+                  />
+                </NoteCard>
+              );
+            })}
           </Section>
 
           {/* Decisions made */}

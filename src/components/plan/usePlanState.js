@@ -48,6 +48,14 @@ const defaultState = {
     politico_subscribed: false,
     second_newsletter: false,
   },
+  // Research notes — Phase A papers
+  research_notes: {
+    boring_ottoboni: '',
+    centra_gaubatz: '',
+    felton_mitchell: '',
+    macnell_driscoll: '',
+    kreitzer_sweet_cushman: '',
+  },
   // Meta
   last_updated: null,
   checkin_streak: 0,

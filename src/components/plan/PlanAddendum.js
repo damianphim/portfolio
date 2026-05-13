@@ -5,6 +5,7 @@ const fadeIn = keyframes`from { opacity: 0; } to { opacity: 1; }`;
 
 const Wrap = styled.div`animation: ${fadeIn} 0.25s ease;`;
 
+
 const Block = styled.div`
   font-size: 0.88rem;
   line-height: 1.7;

@@ -39,7 +39,7 @@ const defaultState = {
   },
   // Daily log
   log: [], // [{date: 'YYYY-MM-DD', entry: 'text'}]
-  // Reading tracker
+  // Reading tracker (immediate / non-lit-review)
   reading: {
     boring_ottoboni: false,
     habermas_wiki: false,
@@ -48,13 +48,68 @@ const defaultState = {
     politico_subscribed: false,
     second_newsletter: false,
   },
-  // Research notes — Phase A papers
+  // Per-paper reading status for the lit review
+  // Values: 'not_started' | 'reading' | 'notes_written'
+  reading_status: {
+    // Phase 1 — Orientation reviews
+    heffernan: 'not_started',
+    gordon_alam: 'not_started',
+    guo_llm_bias: 'not_started',
+    // Phase 2 — Foundation
+    boring_ottoboni: 'not_started',
+    macnell_driscoll: 'not_started',
+    centra_gaubatz: 'not_started',
+    felton_mitchell: 'not_started',
+    kreitzer_sweet_cushman: 'not_started',
+    // Phase 3 — Post-2016 SET bias
+    mengel_sauermann: 'not_started',
+    aragon_pietri: 'not_started',
+    mitchell_martin: 'not_started',
+    // Phase 4 — RateMyProfessor-specific
+    fernandez_yetter: 'not_started',
+    rosen: 'not_started',
+    zheng_vastrad: 'not_started',
+    // Phase 5 — Race/ethnicity + intervention + policy
+    chavez_mitchell: 'not_started',
+    fan_shepherd: 'not_started',
+    peterson_biederman: 'not_started',
+    hornstein: 'not_started',
+    // Phase 6 — LLM bias amplification
+    wang_bias_amplification: 'not_started',
+    seshadri_singh: 'not_started',
+    xu_pride_prejudice: 'not_started',
+    ren_guo: 'not_started',
+  },
+  // Research notes — all 22 papers
   research_notes: {
+    // Phase 1 — Orientation reviews
+    heffernan: '',
+    gordon_alam: '',
+    guo_llm_bias: '',
+    // Phase 2 — Foundation
     boring_ottoboni: '',
+    macnell_driscoll: '',
     centra_gaubatz: '',
     felton_mitchell: '',
-    macnell_driscoll: '',
     kreitzer_sweet_cushman: '',
+    // Phase 3 — Post-2016 SET bias
+    mengel_sauermann: '',
+    aragon_pietri: '',
+    mitchell_martin: '',
+    // Phase 4 — RateMyProfessor-specific
+    fernandez_yetter: '',
+    rosen: '',
+    zheng_vastrad: '',
+    // Phase 5 — Race/ethnicity + intervention + policy
+    chavez_mitchell: '',
+    fan_shepherd: '',
+    peterson_biederman: '',
+    hornstein: '',
+    // Phase 6 — LLM bias amplification
+    wang_bias_amplification: '',
+    seshadri_singh: '',
+    xu_pride_prejudice: '',
+    ren_guo: '',
   },
   // Meta
   last_updated: null,

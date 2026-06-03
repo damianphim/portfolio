@@ -137,8 +137,7 @@ export default function PlanAddendum({ state, toggleCheck }) {
       <Accordion title="Morning Block Protocol" defaultOpen>
         <Block>
           <strong>The rule:</strong> Research work (Track A) happens between 9am–noon, every weekday. Phone is in a different room. No email, no Symbolos, no social until noon.<br/><br/>
-          <strong>Why it works:</strong> You said you work better when you feel organized. The morning block is the organization. Three hours of focused research per weekday = 210 hours across 14 weeks. More than enough to ship the paper.<br/><br/>
-          <strong>The recovery rule:</strong> If you miss a morning, don't try to make it up in the afternoon. Just start fresh the next morning. Guilt about missed sessions is more damaging than the missed session.
+          <strong>The recovery rule:</strong> If I miss a morning, don't try to make it up in the afternoon. Just start fresh the next morning. Guilt about missed sessions is more damaging than the missed session.
         </Block>
       </Accordion>
 

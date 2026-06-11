@@ -2,6 +2,7 @@
 
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ThemeContext } from './ThemeProvider';
 
 // Styled component for the navbar container
@@ -26,6 +27,16 @@ const NavLinks = styled.div`
   }
 `;
 
+const NavLink = styled(Link)`
+  margin: 0 15px;
+  color: ${(props) => props.theme.color};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  pointer-events: auto;
+`;
+
 // Styled component for the theme toggle button
 const ToggleButton = styled.button`
   pointer-events: auto;
@@ -41,13 +52,28 @@ const ToggleButton = styled.button`
 
 const Navbar = () => {
   const { toggleTheme, isDarkMode } = useContext(ThemeContext); // Access theme toggle function and mode
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // On the homepage: smooth-scroll to the section.
+  // On any other page: navigate home with the hash; Home scrolls on mount.
+  const goToSection = (e, id) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
 
   return (
     <NavbarContainer>
       <NavLinks>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="/#home" onClick={(e) => goToSection(e, 'home')}>Home</a>
+        <a href="/#projects" onClick={(e) => goToSection(e, 'projects')}>Projects</a>
+        <a href="/#skills" onClick={(e) => goToSection(e, 'skills')}>Skills</a>
+        <NavLink to="/writing">Writing</NavLink>
       </NavLinks>
       <ToggleButton onClick={toggleTheme}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}

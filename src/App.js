@@ -13,6 +13,8 @@ import Plan from './components/plan/Plan';
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
+const Writing = lazy(() => import('./components/writing/Writing'));
+const Essay = lazy(() => import('./components/writing/Essay'));
 
 function App() {
   useEffect(() => {
@@ -27,8 +29,8 @@ function App() {
       <SpeedInsights />
       <Analytics />
       <GlobalStyles />
-      <GalaxyAnimation />
       <div style={{ position: 'relative', zIndex: 1 }}>
+        <GalaxyAnimation />
         <Router>
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>
@@ -38,6 +40,8 @@ function App() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/volunteer" element={<VolunteerProjects />} />
               <Route path="/plan" element={<Plan />} />
+              <Route path="/writing" element={<Writing />} />
+              <Route path="/writing/:slug" element={<Essay />} />
             </Routes>
           </Suspense>
         </Router>

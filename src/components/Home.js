@@ -1,8 +1,8 @@
 // Home page
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import BackgroundAnimation from './GalaxyAnimation';
 import Projects from './Projects';
 import Skills from './Skills';
 import VolunteerProjects from './VolunteerProjects';
@@ -33,9 +33,19 @@ const HomeDescription = styled.p`
 `;
 
 const Home = () => {
+  const location = useLocation();
+
+  // When arriving from another page with a hash (e.g. /#projects),
+  // scroll to that section once the page has rendered.
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.hash]);
+
   return (
     <>
-      <BackgroundAnimation /> {/* Fullscreen background animation */}
       <HomeContainer id="home">
         <Section>
           <HomeTitle>Damian Phimister</HomeTitle>

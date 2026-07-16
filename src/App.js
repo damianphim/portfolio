@@ -40,7 +40,6 @@ function App() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/volunteer" element={<VolunteerProjects />} />
               <Route path="/plan" element={<Plan />} />
-              <Route path="/writing" element={<Writing />} />
               <Route path="/writing/:slug" element={<Essay />} />
             </Routes>
           </Suspense>

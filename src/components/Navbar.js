@@ -2,7 +2,7 @@
 
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ThemeContext } from './ThemeProvider';
 
 // Styled component for the navbar container

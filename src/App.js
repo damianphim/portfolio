@@ -13,7 +13,6 @@ import Plan from './components/plan/Plan';
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
-const Essay = lazy(() => import('./components/writing/Essay'));
 
 function App() {
   useEffect(() => {
@@ -39,7 +38,6 @@ function App() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/volunteer" element={<VolunteerProjects />} />
               <Route path="/plan" element={<Plan />} />
-              <Route path="/writing/:slug" element={<Essay />} />
             </Routes>
           </Suspense>
         </Router>

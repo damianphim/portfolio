@@ -73,7 +73,6 @@ const Navbar = () => {
         <a href="/#home" onClick={(e) => goToSection(e, 'home')}>Home</a>
         <a href="/#projects" onClick={(e) => goToSection(e, 'projects')}>Projects</a>
         <a href="/#skills" onClick={(e) => goToSection(e, 'skills')}>Skills</a>
-        <NavLink to="/writing">Writing</NavLink>
       </NavLinks>
       <ToggleButton onClick={toggleTheme}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}

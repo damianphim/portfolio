@@ -13,7 +13,6 @@ import Plan from './components/plan/Plan';
 const Home = lazy(() => import('./components/Home'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
-const Writing = lazy(() => import('./components/writing/Writing'));
 const Essay = lazy(() => import('./components/writing/Essay'));
 
 function App() {

@@ -27,16 +27,6 @@ const NavLinks = styled.div`
   }
 `;
 
-const NavLink = styled(Link)`
-  margin: 0 15px;
-  color: ${(props) => props.theme.color};
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-  pointer-events: auto;
-`;
-
 // Styled component for the theme toggle button
 const ToggleButton = styled.button`
   pointer-events: auto;

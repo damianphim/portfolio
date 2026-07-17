@@ -49,7 +49,7 @@ const Home = () => {
       <HomeContainer id="home">
         <Section>
           <HomeTitle>Damian Phimister</HomeTitle>
-          <HomeDescription>An Aspiring Computer Scientist</HomeDescription>
+          <HomeDescription>A Computer Scientist</HomeDescription>
         </Section>
         <Section id="projects">
           <Projects />

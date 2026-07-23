@@ -83,7 +83,7 @@ const projects = [
     tags: ['React', 'Anthropic API', 'Gemini API', 'Perplexity', 'TypeScript'],
   },
   {
-    title: 'Symboulos',
+    title: 'Symbolos',
     description:
       'Full-stack AI-powered academic planning tool with course search, scraped RateMyProfessor ratings, a proactive, conversational AI advisor, degree progress tracker, and statistical grade prediction.',
     liveLink: 'https://ai-advisor-pi.vercel.app',
